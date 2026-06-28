@@ -1,0 +1,259 @@
+{
+  "schema_version": "0.1.0-public",
+  "name": "TED-RAG Public Symbol Table",
+  "description": "Small public example table for TED-RAG symbol dependency validation.",
+  "policy": {
+    "defined_in_is_list": true,
+    "missing_dependency_behavior": {
+      "default": "warn",
+      "require_symbols": "fail"
+    },
+    "representation_fallback": {
+      "canonical_first": true,
+      "missing_symbol_fallback": "braille_term",
+      "fallback_fields": [
+        "braille",
+        "braille_unicode",
+        "braille_term",
+        "brailic",
+        "tactile_representation"
+      ],
+      "ascii_alias_fallback": true
+    }
+  },
+  "symbols": {
+    "S_ent": {
+      "kind": "functional",
+      "defined_in": [
+        "rag/seed_context/TED_RAG_ALPHA.md#alpha-equation"
+      ],
+      "aliases": [
+        "S_ent[Ψ]",
+        "entanglement entropy"
+      ],
+      "depends_on": [
+        "Ψ",
+        "D[Ψ']",
+        "|Ψ'⟩⟨Ψ'|",
+        "λ",
+        "D[T]",
+        "S_tachyon"
+      ],
+      "formula": "S_ent[Ψ] = S_ent[Ψ, ∫ D[Ψ'] |Ψ'⟩⟨Ψ'| e^(-S_ent[Ψ'])] + λ ∫ D[T] S_tachyon[T, Ψ]",
+      "use": "Alpha scoring and entanglement-oriented retrieval"
+    },
+    "Û(t,t')": {
+      "kind": "operator",
+      "defined_in": [
+        "rag/seed_context/TED_RAG_ALPHA.md#temporal-entanglement-operator"
+      ],
+      "aliases": [
+        "U(t,t')",
+        "temporal entanglement operator"
+      ],
+      "depends_on": [
+        "Ĥ_ent"
+      ],
+      "formula": "T exp(-i ∫ dt'' Ĥ_ent(t''))",
+      "use": "TED expansion and dependency-aware context ordering"
+    },
+    "γ_SUSY": {
+      "kind": "metric",
+      "defined_in": [
+        "rag/seed_context/TED_RAG_ALPHA.md#error-correction-and-decoherence"
+      ],
+      "aliases": [
+        "gamma_SUSY",
+        "decoherence penalty"
+      ],
+      "depends_on": [
+        "γ_0",
+        "β",
+        "N_SUSY"
+      ],
+      "formula": "γ_SUSY = γ_0 exp(β N_SUSY)",
+      "use": "Penalty for unresolved symbol-like degrees of freedom"
+    },
+    "Ψ": {
+      "kind": "state",
+      "defined_in": [
+        "rag/seed_context/TED_RAG_ALPHA.md#alpha-equation"
+      ],
+      "aliases": [
+        "Psi",
+        "quantum state"
+      ],
+      "depends_on": [],
+      "braille_term": "⠏",
+      "use": "Query or conversation state vector"
+    },
+    "λ": {
+      "kind": "coupling",
+      "defined_in": [
+        "rag/seed_context/TED_RAG_ALPHA.md#alpha-equation"
+      ],
+      "aliases": [
+        "lambda"
+      ],
+      "depends_on": [],
+      "use": "Tachyon-action coupling"
+    },
+    "D[Ψ']": {
+      "kind": "measure",
+      "defined_in": [
+        "rag/seed_context/TED_RAG_ALPHA.md#alpha-equation"
+      ],
+      "aliases": [
+        "path integral measure over Psi prime"
+      ],
+      "depends_on": [
+        "Ψ"
+      ],
+      "use": "Measure over candidate quantum states"
+    },
+    "|Ψ'⟩⟨Ψ'|": {
+      "kind": "projector",
+      "defined_in": [
+        "rag/seed_context/TED_RAG_ALPHA.md#alpha-equation"
+      ],
+      "aliases": [
+        "ket-bra projector"
+      ],
+      "depends_on": [
+        "Ψ"
+      ],
+      "use": "Projector over candidate quantum states"
+    },
+    "D[T]": {
+      "kind": "measure",
+      "defined_in": [
+        "rag/seed_context/TED_RAG_ALPHA.md#alpha-equation"
+      ],
+      "aliases": [
+        "tachyon measure"
+      ],
+      "depends_on": [
+        "T"
+      ],
+      "use": "Measure over tachyon configurations"
+    },
+    "S_tachyon": {
+      "kind": "functional",
+      "defined_in": [
+        "rag/seed_context/TED_RAG_ALPHA.md#alpha-equation"
+      ],
+      "aliases": [
+        "tachyon action"
+      ],
+      "depends_on": [
+        "T",
+        "Ψ"
+      ],
+      "use": "Tachyon action contribution"
+    },
+    "Ĥ_ent": {
+      "kind": "operator",
+      "defined_in": [
+        "rag/seed_context/TED_RAG_ALPHA.md#temporal-entanglement-operator"
+      ],
+      "aliases": [
+        "H_ent"
+      ],
+      "depends_on": [],
+      "use": "Entanglement Hamiltonian"
+    },
+    "η": {
+      "kind": "metric",
+      "defined_in": [
+        "rag/seed_context/TED_RAG_ALPHA.md#error-correction-and-decoherence"
+      ],
+      "aliases": [
+        "eta"
+      ],
+      "depends_on": [
+        "η_0",
+        "D_f",
+        "α"
+      ],
+      "formula": "η = η_0 (D_f - 1)^α",
+      "use": "Error-correction multiplier"
+    },
+    "η_0": {
+      "kind": "constant",
+      "defined_in": [
+        "rag/seed_context/TED_RAG_ALPHA.md#error-correction-and-decoherence"
+      ],
+      "aliases": [
+        "eta0"
+      ],
+      "depends_on": [],
+      "use": "Base error-correction coefficient"
+    },
+    "D_f": {
+      "kind": "metric",
+      "defined_in": [
+        "rag/seed_context/TED_RAG_ALPHA.md#error-correction-and-decoherence"
+      ],
+      "aliases": [
+        "fractal dimension"
+      ],
+      "depends_on": [],
+      "use": "Estimated fractal dimension of chunk text"
+    },
+    "α": {
+      "kind": "exponent",
+      "defined_in": [
+        "rag/seed_context/TED_RAG_ALPHA.md#error-correction-and-decoherence"
+      ],
+      "aliases": [
+        "alpha"
+      ],
+      "depends_on": [],
+      "use": "Error-correction exponent"
+    },
+    "γ_0": {
+      "kind": "constant",
+      "defined_in": [
+        "rag/seed_context/TED_RAG_ALPHA.md#error-correction-and-decoherence"
+      ],
+      "aliases": [
+        "gamma0"
+      ],
+      "depends_on": [],
+      "use": "Base decoherence coefficient"
+    },
+    "β": {
+      "kind": "exponent",
+      "defined_in": [
+        "rag/seed_context/TED_RAG_ALPHA.md#error-correction-and-decoherence"
+      ],
+      "aliases": [
+        "beta"
+      ],
+      "depends_on": [],
+      "use": "Decoherence growth coefficient"
+    },
+    "N_SUSY": {
+      "kind": "count",
+      "defined_in": [
+        "rag/seed_context/TED_RAG_ALPHA.md#error-correction-and-decoherence"
+      ],
+      "aliases": [
+        "unresolved symbol count"
+      ],
+      "depends_on": [],
+      "use": "Count of unresolved symbol-like tokens"
+    },
+    "T": {
+      "kind": "field",
+      "defined_in": [
+        "rag/seed_context/TED_RAG_ALPHA.md#alpha-equation"
+      ],
+      "aliases": [
+        "tachyon field"
+      ],
+      "depends_on": [],
+      "use": "Tachyon field variable"
+    }
+  }
+}

@@ -5,6 +5,19 @@
 
 Compiler-validated RAG. TED-RAG reduces LLM drift by treating retrieval like a dependency graph: symbols are resolved, prerequisite chunks are pulled in, context is topologically ordered, and citations are checked after generation.
 
+## Why This Matters
+
+Most RAG systems treat documents as disconnected text.
+
+TED-RAG explores a different approach by combining:
+
+- Symbol-aware retrieval
+- Dependency-based document relationships
+- Citation-grounded generation
+- CPU-friendly local inference
+
+The goal is to make large personal knowledge bases searchable without relying on cloud services.
+
 Instead of only retrieving nearest chunks, TED-RAG can build normalized context:
 
 ```text

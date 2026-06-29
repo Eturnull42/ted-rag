@@ -18,6 +18,8 @@ TED-RAG explores a different approach by combining:
 
 The goal is to make large personal knowledge bases searchable without relying on cloud services.
 
+Read the short technical overview: [TED-RAG whitepaper](docs/whitepaper.md).
+
 Instead of only retrieving nearest chunks, TED-RAG can build normalized context:
 
 ```text
@@ -89,6 +91,8 @@ TED-RAG symbol validation:
 ## Repository Layout
 
 ```text
+docs/
+  whitepaper.md
 genesis/
   gamma_susy_compute.md
   streaming_potato_controls.md

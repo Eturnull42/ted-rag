@@ -20,6 +20,9 @@ rag/index_*/
 *.pkl
 rag/last_answer.txt
 rag/deep_style_answer.txt
+index_chronomere/memory/*.sqlite
+index_chronomere/memory/*.sqlite-shm
+index_chronomere/memory/*.sqlite-wal
 
 # OS/editor
 .DS_Store

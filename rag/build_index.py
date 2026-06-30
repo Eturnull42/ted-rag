@@ -27,7 +27,7 @@ class Chunk:
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Build embedding index for Enigma Stone")
+    parser = argparse.ArgumentParser(description="Build embedding index for TED-RAG")
     parser.add_argument("--root", default=".", help="Workspace root")
     parser.add_argument("--out", default="rag/index", help="Output index directory")
     parser.add_argument("--include", default=",".join(DEFAULT_INCLUDE), help="Comma-separated include paths")

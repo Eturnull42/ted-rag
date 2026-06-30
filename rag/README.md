@@ -1,6 +1,6 @@
-# Enigma Stone TED-RAG (Local, Ollama)
+# TED-RAG (Local, Ollama)
 
-This setup builds a local retrieval index over your Enigma Stone corpus and answers questions with source citations. The TED-RAG layer adds canonical seed context for Temporal Entanglement Dynamics, EQG/tachyon action terms, the Alpha Equation, and the Relic/Brailic symbolic language before retrieving from the wider notes.
+This setup builds a local retrieval index over public TED-RAG seed context and answers questions with source citations. The TED-RAG layer adds canonical seed context for Temporal Entanglement Dynamics, EQG/tachyon action terms, the Alpha Equation, and the Relic/Brailic symbolic language before retrieving from any optional local notes you explicitly add.
 
 ## Why this stack
 
@@ -36,7 +36,7 @@ Optional knobs:
 - `--chunk-size 1200`
 - `--chunk-overlap 180`
 - `--embed-model nomic-embed-text`
-- `--include "rag/seed_context,book,binary,Binary Enigma,notes/markdown,zip_imports"`
+- `--include "rag/seed_context,docs,genesis_public"`
 - `--exclude-ext ".jpeg,.jpg,.png,.pdf,.bin,.pkl"`
 
 By default, the indexer excludes these extensions to keep retrieval text-only:
